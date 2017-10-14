@@ -1,2 +1,2 @@
 # ngcrud
-crud application using mean stack
+crud application using mean stack by Jeyaprakash
