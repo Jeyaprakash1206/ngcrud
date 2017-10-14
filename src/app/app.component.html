@@ -1,0 +1,19 @@
+<div class="container">
+  <form >
+    <div class="form-group">
+      <label for="inputsm">Add todo</label>
+      <input class="form-control input-sm" id="inputsm" type="text" name="Name" [(ngModel)]="selectedPerson.Name">
+    </div>
+    <button *ngIf="action=='Add'" type="button" (click)="onSubmit(selectedPerson)" class="btn btn-default">Add</button>
+    <button *ngIf="action=='Update'" type="button" (click)="onSubmit(selectedPerson)" class="btn btn-default">Update</button>
+  </form>
+  <h2>Your Todo List</h2>
+  <ul class="list-group" *ngFor="let person of personDetails">
+    <div class="row">
+      <div class="col-md-6">
+        <li class="list-group-item" (click)="onSelectVideo(person)">{{person.Name}}</li>
+      </div>
+      <div class="col-md-6"><button type="button" (click)="onDelete(person)" class="btn btn-danger">delete</button></div>
+    </div>
+  </ul>
+</div>
